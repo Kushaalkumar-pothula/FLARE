@@ -1,7 +1,7 @@
 # FLARE
-FLARE is an astrophysical code written in Python to generate a synthetic catalog of 100,000 Fast Radio Bursts (FRBs). It employs a Monte-Carlo algorithm to generate synthetic FRBs.
+FLARE is an astrophysical code written in Python to generate a synthetic catalog of 100,000 Fast Radio Bursts (FRBs). It uses the Monte Carlo statistical technique to generate a synthetic FRB catalog. It also analyses the resulting catalog and makes its histograms.
 
-FLARE runs Python scripts in parallel, which results in a fast execution of the code.
+FLARE runs FRB generation scripts in parallel, which makes the code fast.
 ## Installation 
 To install FLARE on a computer, run the following commands in your terminal:
 ```bash
