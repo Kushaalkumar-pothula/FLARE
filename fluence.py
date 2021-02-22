@@ -5,9 +5,7 @@ time_now = datetime.now().strftime("%Y-%m-%d-%H-%M")
 energy_data  = np.loadtxt(time_now+"_energy.txt")
 distance_data  = np.loadtxt(time_now+"_distance.txt")
 
-from numba import jit
 #------------------Fluence values----------------------
-@jit(nopython = True)
 def fluence_calc(d,e):
     """
     Return calculated value of FRB fluence, for giant flares 
