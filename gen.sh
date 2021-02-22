@@ -8,10 +8,9 @@ python energy.py &
 python distance.py &
 wait
 python fluence.py
-wait
 python fluence_x_rays.py &
 python fluence_analysis.py &
-wait
+
 end_time="$(date -u +%s)"
 elapsed="$(($end_time-$start_time))"
 
