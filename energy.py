@@ -1,10 +1,10 @@
 import numpy as np
 from datetime import datetime
-
+from numba import jit
 energy = [] #Giant flare energy in ergs
 
 #------------------Giant flare energy------------------
-
+@jit(nopython = True)
 def flare_energy():
     """
     Return a random value of giant flare energy, in the range
@@ -18,8 +18,13 @@ def flare_energy():
 #-------------------------------------------------------
 
 #Generate 100,000 giant flares
-for i in range(100000):
+@jit(nopython = True)
+def generate():
+    for i in range(100000):
     energy.append(flare_energy())
+    
+    
+generate()
 
 arr_e = np.array(energy)
 
