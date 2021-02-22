@@ -8,7 +8,7 @@ python energy.py &
 python distance.py &
 wait
 python energy_analysis.py &
-pyhton distance_analysis.py &
+python distance_analysis.py &
 python fluence.py &
 wait
 python fluence_x_rays.py &
