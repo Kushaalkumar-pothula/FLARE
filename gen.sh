@@ -1,8 +1,10 @@
 #!/bin/bash
 
 current_date_time="`date "+%Y-%m-%d %H:%M"`";
-start_time="$(date -u +%s)"
 echo "Starting FLARE at $current_date_time:"
+
+
+start_time="$(date -u +%s)"
 
 python energy.py &
 python distance.py &
