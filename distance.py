@@ -1,11 +1,9 @@
 import numpy as np
 from datetime import datetime
-from numba import jit
 
 d_meters = []   #FRB distance in meters
 
 #--------------------FRB Distances-----------------------
-@jit(nopython = True)
 def distance():
     """
     Return a random value of FRB distance, 
