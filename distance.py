@@ -1,9 +1,11 @@
 import numpy as np
 from datetime import datetime
+from numba import jit
 
 d_meters = []   #FRB distance in meters
 
 #--------------------FRB Distances-----------------------
+@jit(nopython = True)
 def distance():
     """
     Return a random value of FRB distance, 
@@ -16,8 +18,12 @@ def distance():
 #---------------------------------------------------------
 
 #Generate 100,000 FRB distances
-for i in range(100000):
+@jit(nopython = True)
+def generate():
+    for i in range(100000):
     d_meters.append(distance())
+    
+generate()
 
 arr_d = np.array(d_meters)
 time_now = datetime.now().strftime("%Y-%m-%d-%H-%M")
