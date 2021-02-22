@@ -7,7 +7,6 @@ start_time="$(date -u +%s)"
 
 python energy.py &
 python distance.py &
-python time.py &
 wait
 python fluence.py
 python fluence_x_rays.py &
