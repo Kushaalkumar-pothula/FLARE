@@ -21,3 +21,5 @@ To generate a synthetic FRB catalog using FLARE, you will need to run ```gen.sh`
 You will now find some ```.txt``` files, which have the local date-time (during the catalog generation) as a prefix. Each of these ```.txt``` files contain a specific property of a mock FRB.
 These results are analyzed in a single run of FLARE, and they are saved as ```.png``` files.
 
+## User Guide
+Going through the FLARE user guide (https://github.com/Kushaalkumar-pothula/FLARE/wiki) is *highly* recommended. It includes important articles about FLARE, which are helpful for learning to use FLARE.
