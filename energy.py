@@ -4,7 +4,6 @@ from datetime import datetime
 energy = [] #Giant flare energy in ergs
 
 #------------------Giant flare energy------------------
-@jit(nopython = True)
 def flare_energy():
     """
     Return a random value of giant flare energy, in the range
