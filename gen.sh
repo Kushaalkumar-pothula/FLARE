@@ -7,9 +7,7 @@ echo "Starting FLARE at $current_date_time:"
 python energy.py &
 python distance.py &
 wait
-python energy_analysis.py &
-python distance_analysis.py &
-python fluence.py &
+python fluence.py
 wait
 python fluence_x_rays.py &
 python fluence_analysis.py &
