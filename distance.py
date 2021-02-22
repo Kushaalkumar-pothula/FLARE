@@ -18,12 +18,8 @@ def distance():
 #---------------------------------------------------------
 
 #Generate 100,000 FRB distances
-@jit(nopython = True)
-def generate():
-    for i in range(100000):
-        d_meters.append(distance())
-    
-generate()
+for i in range(100000):
+    d_meters.append(distance())
 
 arr_d = np.array(d_meters)
 time_now = datetime.now().strftime("%Y-%m-%d-%H-%M")
