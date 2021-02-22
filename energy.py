@@ -21,7 +21,7 @@ def flare_energy():
 @jit(nopython = True)
 def generate():
     for i in range(100000):
-    energy.append(flare_energy())
+        energy.append(flare_energy())
     
     
 generate()
