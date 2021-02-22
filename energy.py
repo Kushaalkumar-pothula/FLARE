@@ -1,6 +1,6 @@
 import numpy as np
 from datetime import datetime
-from numba import jit
+
 energy = [] #Giant flare energy in ergs
 
 #------------------Giant flare energy------------------
@@ -18,14 +18,9 @@ def flare_energy():
 #-------------------------------------------------------
 
 #Generate 100,000 giant flares
-@jit(nopython = True)
-def generate():
-    for i in range(100000):
-        energy.append(flare_energy())
-    
-    
-generate()
-
+for i in range(100000):
+    energy.append(flare_energy())
+ 
 arr_e = np.array(energy)
 
 time_now = datetime.now().strftime("%Y-%m-%d-%H-%M")
