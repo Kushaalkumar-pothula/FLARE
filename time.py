@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt 
 from datetime import datetime
 
+time = []
 #------------------FRB period------------------
 
 def frb_period():
