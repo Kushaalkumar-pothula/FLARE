@@ -16,5 +16,5 @@ plt.grid(True)
 plt.yscale("Log")
 
 time_now_2 = datetime.now().strftime("%Y-%m-%d-%H-%M")
-plt.savefig(time_now_2+"Radio Fluence.png")
+plt.savefig(time_now_2+"Radio Fluence Analysis.png")
 #-----------------------------------------------------------------------
