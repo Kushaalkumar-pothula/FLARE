@@ -21,7 +21,7 @@ def distance():
 @jit(nopython = True)
 def generate():
     for i in range(100000):
-    d_meters.append(distance())
+        d_meters.append(distance())
     
 generate()
 
