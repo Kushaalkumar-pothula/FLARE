@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 fig = plt.gcf()
 fig.set_size_inches(8,6)
-plt.hist(energy_data, bins = 500, alpha = 0.5, color = 'orange')
+plt.hist(energy_data, bins = 500, alpha = 0.5, color = 'blue')
 plt.xlabel(r"$Energy\ [erg]$", fontsize = 15,)
 plt.ylabel("Number of FRBs",fontsize = 15)
 plt.grid(True)
