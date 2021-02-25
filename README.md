@@ -23,3 +23,6 @@ These results are analyzed in a single run of FLARE, and they are saved as ```.p
 
 ## User Guide
 Going through the FLARE user guide (https://github.com/Kushaalkumar-pothula/FLARE/wiki) is *highly* recommended. It includes important articles about FLARE, which are helpful for learning to use FLARE.
+
+## Author
+[Kushaal Kumar Pothula](https://sites.google.com/view/kushaal-kumar-pothula/)
