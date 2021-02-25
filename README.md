@@ -34,7 +34,7 @@ If you use FLARE in your research, please cite FLARE by adding this BibTeX entry
 ```
 @software{kushaal_kumar_pothula_2021_4562275,
   author       = {Kushaal Kumar Pothula},
-  title        = {Kushaalkumar-pothula/FLARE: FLARE DOI Addition},
+  title        = {The FLARE Code},
   month        = feb,
   year         = 2021,
   publisher    = {Zenodo},
