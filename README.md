@@ -28,3 +28,18 @@ Going through the FLARE user guide (https://github.com/Kushaalkumar-pothula/FLAR
 
 ## Author
 [Kushaal Kumar Pothula](https://sites.google.com/view/kushaal-kumar-pothula/)
+
+## Citing FLARE
+If you use FLARE in your research, please cite FLARE by adding this BibTeX entry to your bibliography:
+```
+@software{kushaal_kumar_pothula_2021_4562275,
+  author       = {Kushaal Kumar Pothula},
+  title        = {Kushaalkumar-pothula/FLARE: FLARE DOI Addition},
+  month        = feb,
+  year         = 2021,
+  publisher    = {Zenodo},
+  version      = {v1.0.1},
+  doi          = {10.5281/zenodo.4562274},
+  url          = {https://doi.org/10.5281/zenodo.4562274}
+}
+```
