@@ -1,12 +1,17 @@
-from datetime import datetime
-time_now = datetime.now().strftime("%Y-%m-%d-%H-%M")
-
 import numpy as np
-radio_fluence  = np.loadtxt(time_now+"_fluence.txt")
-
-#-----------------------------Plot---------------------------------------
+import os
 import matplotlib.pyplot as plt
 
+#------------------------------File IO (input)------------------------------
+i = 0
+while os.path.exists("flare_fluence_result%s.txt" % i):
+    i += 1
+
+np.loadtxt("flare_fluence_result%s.txt" % i_1)
+#---------------------------------------------------------------------------
+
+
+#-----------------------------Plot---------------------------------------
 fig = plt.gcf()
 fig.set_size_inches(8,6)
 plt.hist(radio_fluence, bins = 500, alpha = 0.5, color = 'orange')
@@ -15,6 +20,5 @@ plt.ylabel("Number of FRBs",fontsize = 15)
 plt.grid(True)
 plt.yscale("Log")
 
-time_now_2 = datetime.now().strftime("%Y-%m-%d-%H-%M")
-plt.savefig(time_now_2+"Radio Fluence Analysis.png")
+plt.savefig("fluence_analysis_result%s.png" % i)
 #-----------------------------------------------------------------------
