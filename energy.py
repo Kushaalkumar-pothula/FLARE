@@ -1,9 +1,10 @@
 import numpy as np
 from datetime import datetime
 
+#----------------------------Astrophysics--------------------------------
+
 energy = [] #Giant flare energy in ergs
 
-#------------------Giant flare energy------------------
 def flare_energy():
     """
     Return a random value of giant flare energy, in the range
@@ -14,13 +15,21 @@ def flare_energy():
     f_energy = np.random.uniform(1e38,1e47)
     return f_energy
     
-#-------------------------------------------------------
 
 #Generate 100,000 giant flares
 for i in range(100000):
     energy.append(flare_energy())
  
+#--------------------------------------------------------------------------
+
+
+#----------------------------------File IO---------------------------------
 arr_e = np.array(energy)
 
-time_now = datetime.now().strftime("%Y-%m-%d-%H-%M")
-np.savetxt(time_now+"_energy.txt",arr_e)
+i = 0
+while os.path.exists("flare_energy_result%s.txt" % i):
+    i += 1
+
+ 
+np.savetxt("flare_energy_result%s.txt" % i, arr_e)
+#---------------------------------------------------------------------------
