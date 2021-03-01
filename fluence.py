@@ -8,7 +8,7 @@ if os.path.exists("flare_distance_result%s.txt" % i_1):
 else:
     i_1 += 1
 
-np.loadtxt("flare_distance_result%s.txt" % i_1)
+distance_data = np.loadtxt("flare_distance_result%s.txt" % i_1)
 
 i_2 = 0
 if os.path.exists("flare_energy_result%s.txt" % i_2):
@@ -16,7 +16,7 @@ if os.path.exists("flare_energy_result%s.txt" % i_2):
 else:
     i_2 += 1
 
-np.loadtxt("flare_energy_result%s.txt" % i_2)
+energy_data = np.loadtxt("flare_energy_result%s.txt" % i_2)
 #---------------------------------------------------------------------------
 
 #------------------Fluence values----------------------
