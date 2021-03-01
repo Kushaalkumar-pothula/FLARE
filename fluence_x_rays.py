@@ -1,8 +1,15 @@
 import numpy as np
-from datetime import datetime
+import os
+import matplotlib.pyplot as plt
 
-time_now = datetime.now().strftime("%Y-%m-%d-%H-%M")
-radio_fluence  = np.loadtxt(time_now+"_fluence.txt")
+#------------------------------File IO (input)------------------------------
+i = 0
+while os.path.exists("flare_fluence_result%s.txt" % i):
+    i += 1
+
+np.loadtxt("flare_fluence_result%s.txt" % i)
+#---------------------------------------------------------------------------
+
 
 #------------------Fluence values----------------------
 def fluence_x_ray_calc(f):
@@ -21,8 +28,6 @@ def fluence_x_ray_calc(f):
 fluence_x_rays = list(map(fluence_x_ray_calc, radio_fluence))
 
 #---------------------Plotting-------------------------
-import matplotlib.pyplot as plt
-
 fig = plt.gcf()
 fig.set_size_inches(8,6)
 
@@ -33,6 +38,5 @@ plt.ylabel("Number of FRBs",fontsize = 15)
 plt.grid(True)
 plt.yscale("Log")
 
-time_now_2 = datetime.now().strftime("%Y-%m-%d-%H-%M")
-plt.savefig(time_now_2+"X-ray Fluence.png")
+plt.savefig("fluence_x_result%s.png" % i)
 #----------------------------------------------------
