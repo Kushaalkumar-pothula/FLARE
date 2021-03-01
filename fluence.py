@@ -2,13 +2,13 @@ import numpy as np
 import os
 
 #------------------------------File IO (input)------------------------------
-i_1 = -1
+i_1 = -2
 while os.path.exists("flare_distance_result%s.txt" % i_1):
     i_1 += 1
 
 np.loadtxt("flare_distance_result%s.txt" % i_1)
 
-i_2 = -1
+i_2 = -2
 while os.path.exists("flare_energy_result%s.txt" % i_2):
     i_2 += 1
 
@@ -35,7 +35,7 @@ fluence = list(map(fluence_calc, distance_data, energy_data))
 
 #------------------------------File IO (output)-----------------------------
 arr_f = np.array(fluence)
-i = -1
+i = -2
 while os.path.exists("flare_fluence_result%s.txt" % i):
     i += 1
 
