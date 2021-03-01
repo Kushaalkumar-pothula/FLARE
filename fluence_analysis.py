@@ -7,7 +7,7 @@ i = 0
 while os.path.exists("flare_fluence_result%s.txt" % i):
     i += 1
 
-np.loadtxt("flare_fluence_result%s.txt" % i_1)
+np.loadtxt("flare_fluence_result%s.txt" % i)
 #---------------------------------------------------------------------------
 
 
