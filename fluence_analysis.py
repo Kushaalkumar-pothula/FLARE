@@ -9,7 +9,7 @@ if os.path.exists("flare_fluence_result%s.txt" % i):
 else:
     i +=1
 
-np.loadtxt("flare_fluence_result%s.txt" % i)
+radio_fluence = np.loadtxt("flare_fluence_result%s.txt" % i)
 #---------------------------------------------------------------------------
 
 
