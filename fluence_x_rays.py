@@ -3,11 +3,13 @@ import os
 import matplotlib.pyplot as plt
 
 #------------------------------File IO (input)------------------------------
-i = -2
-while os.path.exists("flare_fluence_result%s.txt" % i):
+i = 0
+if os.path.exists("flare_fluence_result%s.txt" % i):
+    pass
+else:
     i += 1
 
-np.loadtxt("flare_fluence_result%s.txt" % i)
+radio_fluence = np.loadtxt("flare_fluence_result%s.txt" % i)
 #---------------------------------------------------------------------------
 
 
