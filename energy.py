@@ -26,7 +26,7 @@ for i in range(100000):
 #----------------------------------File IO---------------------------------
 arr_e = np.array(energy)
 
-i = -1
+i = -2
 while os.path.exists("flare_energy_result%s.txt" % i):
     i += 1
 
