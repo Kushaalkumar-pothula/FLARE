@@ -3,7 +3,7 @@ import os
 import matplotlib.pyplot as plt
 
 #------------------------------File IO (input)------------------------------
-i = 0
+i = -1
 while os.path.exists("flare_fluence_result%s.txt" % i):
     i += 1
 
