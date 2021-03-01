@@ -1,9 +1,9 @@
 import numpy as np
-import os
+from datetime import datetime
 
-#--------------------------------Astrophysics--------------------------------
 d_meters = []   #FRB distance in meters
 
+#--------------------FRB Distances-----------------------
 def distance():
     """
     Return a random value of FRB distance, 
@@ -13,19 +13,12 @@ def distance():
     """
     dist_m = np.random.uniform(6.4332967e24,1.6849561e26)
     return dist_m
+#---------------------------------------------------------
 
 #Generate 100,000 FRB distances
 for i in range(100000):
     d_meters.append(distance())
-#--------------------------------------------------------------------------
 
-
-#----------------------------------File IO---------------------------------
-i = 0
-while os.path.exists("flare_distance_result%s.txt" % i):
-    i += 1
-
- 
-arr = np.array(d_meters)
-np.savetxt("flare_distance_result%s.txt" % i, arr)
-#---------------------------------------------------------------------------
+arr_d = np.array(d_meters)
+time_now = datetime.now().strftime("%Y-%m-%d-%H-%M")
+np.savetxt(time_now+"_distance.txt",arr_d)
