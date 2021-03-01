@@ -1,9 +1,18 @@
 import numpy as np
-from datetime import datetime
 
-time_now = datetime.now().strftime("%Y-%m-%d-%H-%M")
-energy_data  = np.loadtxt(time_now+"_energy.txt")
-distance_data  = np.loadtxt(time_now+"_distance.txt")
+#------------------------------File IO (input)------------------------------
+i_1 = 0
+while os.path.exists("flare_distance_result%s.txt" % i_1):
+    i_1 += 1
+
+np.loadtxt("flare_distance_result%s.txt" % i_1)
+
+i_2 = 0
+while os.path.exists("flare_energy_result%s.txt" % i_2):
+    i_2 += 1
+
+np.loadtxt("flare_energy_result%s.txt" % i_2)
+#---------------------------------------------------------------------------
 
 #------------------Fluence values----------------------
 def fluence_calc(d,e):
@@ -22,7 +31,14 @@ def fluence_calc(d,e):
 
 fluence = list(map(fluence_calc, distance_data, energy_data))
 
-time_now_2 = datetime.now().strftime("%Y-%m-%d-%H-%M")
 
+#------------------------------File IO (output)-----------------------------
 arr_f = np.array(fluence)
-np.savetxt(time_now_2+"_fluence.txt", arr_f)
+i = 0
+while os.path.exists("flare_fluence_result%s.txt" % i):
+    i += 1
+
+
+np.savetxt("flare_fluence_result%s.txt" % i, arr_f)
+#---------------------------------------------------------------------------
+
