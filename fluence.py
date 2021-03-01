@@ -2,7 +2,7 @@ import numpy as np
 import os
 
 #------------------------------File IO (input)------------------------------
-i_1 = -2
+i_1 = -4
 while os.path.exists("flare_distance_result%s.txt" % i_1):
     i_1 += 1
 
