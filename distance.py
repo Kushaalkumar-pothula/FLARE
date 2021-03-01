@@ -22,10 +22,10 @@ for i in range(100000):
 
 #----------------------------------File IO---------------------------------
 i = 0
-while os.path.exists("flare_result%s.txt" % i):
+while os.path.exists("flare_distance_result%s.txt" % i):
     i += 1
 
  
 arr = np.array(d_meters)
-np.savetxt("flare_result%s.txt" % i, arr)
+np.savetxt("flare_distance_result%s.txt" % i, arr)
 #---------------------------------------------------------------------------
