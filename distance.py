@@ -21,7 +21,7 @@ for i in range(100000):
 
 
 #----------------------------------File IO---------------------------------
-i = -1
+i = 0
 while os.path.exists("flare_distance_result%s.txt" % i):
     i += 1
 
