@@ -2,13 +2,13 @@ import numpy as np
 import os
 
 #------------------------------File IO (input)------------------------------
-i_1 = -1
+i_1 = 0
 while os.path.exists("flare_distance_result%s.txt" % i_1):
     i_1 += 1
 
 np.loadtxt("flare_distance_result%s.txt" % i_1)
 
-i_2 = -1
+i_2 = 0
 while os.path.exists("flare_energy_result%s.txt" % i_2):
     i_2 += 1
 
