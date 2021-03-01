@@ -35,7 +35,7 @@ fluence = list(map(fluence_calc, distance_data, energy_data))
 
 #------------------------------File IO (output)-----------------------------
 arr_f = np.array(fluence)
-i = 0
+i = -1
 while os.path.exists("flare_fluence_result%s.txt" % i):
     i += 1
 
