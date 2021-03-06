@@ -1,7 +1,4 @@
 import numpy as np
-from datetime import datetime
-
-energy = [] #Giant flare energy in ergs
 
 #------------------Giant flare energy------------------
 def flare_energy():
@@ -16,11 +13,9 @@ def flare_energy():
     
 #-------------------------------------------------------
 
-#Generate 100,000 giant flares
-for i in range(100000):
-    energy.append(flare_energy())
- 
-arr_e = np.array(energy)
-
-time_now = datetime.now().strftime("%Y-%m-%d-%H-%M")
-np.savetxt(time_now+"_energy.txt",arr_e)
+def generate_energy(dirname):
+    #Generate 100,000 giant flares
+    energy = [flare_energy() for _ in range(100000)]
+    
+    arr_e = np.array(energy)
+    np.savetxt(f'{dirname}/energy.txt', arr_e)
