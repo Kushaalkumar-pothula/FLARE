@@ -1,9 +1,4 @@
 import numpy as np
-from datetime import datetime
-
-time_now = datetime.now().strftime("%Y-%m-%d-%H-%M")
-energy_data  = np.loadtxt(time_now+"_energy.txt")
-distance_data  = np.loadtxt(time_now+"_distance.txt")
 
 #------------------Fluence values----------------------
 def fluence_calc(d,e):
@@ -20,9 +15,11 @@ def fluence_calc(d,e):
     return fluence_val
 #------------------------------------------------------
 
-fluence = list(map(fluence_calc, distance_data, energy_data))
+def generate_fluence(dirname):
+    energy_data  = np.loadtxt(f'{dirname}/energy.txt')
+    distance_data  = np.loadtxt(f'{dirname}/distance.txt')
+    
+    fluence = list(map(fluence_calc, distance_data, energy_data))
 
-time_now_2 = datetime.now().strftime("%Y-%m-%d-%H-%M")
-
-arr_f = np.array(fluence)
-np.savetxt(time_now_2+"_fluence.txt", arr_f)
+    arr_f = np.array(fluence)
+    np.savetxt(f'{dirname}/fluence.txt', arr_f)
