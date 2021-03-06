@@ -1,7 +1,4 @@
 import numpy as np
-from datetime import datetime
-
-d_meters = []   #FRB distance in meters
 
 #--------------------FRB Distances-----------------------
 def distance():
@@ -15,10 +12,10 @@ def distance():
     return dist_m
 #---------------------------------------------------------
 
-#Generate 100,000 FRB distances
-for i in range(100000):
-    d_meters.append(distance())
+def generate_distance(dirname):
+    #Generate 100,000 FRB distances
+    d_meters = [distance() for _ in range(100000)]
 
-arr_d = np.array(d_meters)
-time_now = datetime.now().strftime("%Y-%m-%d-%H-%M")
-np.savetxt(time_now+"_distance.txt",arr_d)
+    arr_d = np.array(d_meters)
+    np.savetxt(f'{dirname}/distance.txt', arr_d)
+
