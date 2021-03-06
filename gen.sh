@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 current_date_time="`date "+%Y-%m-%d %H:%M"`";
 echo "Starting FLARE at $current_date_time:"
 
