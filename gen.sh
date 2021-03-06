@@ -5,12 +5,7 @@ echo "Starting FLARE at $current_date_time:"
 
 start_time="$(date -u +%s)"
 
-python energy.py &
-python distance.py &
-wait
-python fluence.py
-python fluence_x_rays.py &
-python fluence_analysis.py &
+python main.py
 
 end_time="$(date -u +%s)"
 elapsed="$(($end_time-$start_time))"
