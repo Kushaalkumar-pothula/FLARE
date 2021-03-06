@@ -7,8 +7,6 @@ FLARE runs FRB generation scripts in parallel, which makes the code very fast.
 ## Installation 
 To install FLARE on a computer, run the following commands in your terminal:
 ```bash
-> mkdir FLARE
-> cd FLARE
 > git clone https://github.com/Kushaalkumar-pothula/FLARE.git
 > cd FLARE
 ```
