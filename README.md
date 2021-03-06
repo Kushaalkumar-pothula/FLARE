@@ -33,14 +33,14 @@ Going through the FLARE user guide (https://github.com/Kushaalkumar-pothula/FLAR
 ## Citing FLARE
 If you use FLARE in your research, please cite FLARE by adding this BibTeX entry to your bibliography:
 ```
-@software{kushaal_kumar_pothula_2021_4562275,
+@software{kushaal_kumar_pothula_2021_4587357,
   author       = {Kushaal Kumar Pothula},
   title        = {The FLARE Code},
-  month        = feb,
+  month        = mar,
   year         = 2021,
   publisher    = {Zenodo},
-  version      = {v1.0.1},
-  doi          = {10.5281/zenodo.4562274},
-  url          = {https://doi.org/10.5281/zenodo.4562274}
+  version      = {v2.0.0},
+  doi          = {10.5281/zenodo.4587357},
+  url          = {https://doi.org/10.5281/zenodo.4587357}
 }
 ```
