@@ -1,15 +1,26 @@
+from os import path, mkdir
+from datetime import datetime
 from concurrent.futures import ProcessPoolExecutor
 
-
-def runFile(filename):
-    exec(open(filename).read())
+from distance import generate_distance
+from energy import generate_energy
+from fluence import generate_fluence
+from fluence_analysis import generate_fluence_plot
+from fluence_x_rays import generate_fluence_xray
 
 
 if __name__ == '__main__':
-    with ProcessPoolExecutor() as e:
-        [e.submit(runFile, i) for i in ['distance.py', 'energy.py']]
+    time_now = datetime.now().strftime("%Y-%m-%d-%H-%M")
+    dirname = f'results_{time_now}'
+    if not path.exists(dirname):
+        mkdir(dirname)
 
-    runFile('fluence.py')
+    with ProcessPoolExecutor() as e:
+        e.submit(generate_distance, dirname)
+        e.submit(generate_energy, dirname)
+
+    generate_fluence(dirname)
 
     with ProcessPoolExecutor() as e:
-        [e.submit(runFile, i) for i in ['fluence_analysis.py', 'fluence_x_rays.py']]
+        e.submit(generate_fluence_plot, dirname)
+        e.submit(generate_fluence_xray, dirname)
