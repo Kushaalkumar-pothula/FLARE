@@ -18,7 +18,7 @@ Now you should have the FLARE code successfully installed on your machine.
 To generate a synthetic FRB catalog using FLARE, you will need to run ```gen.sh```, which can be done by running the following commands in terminal:
 ```bash
 > chmod +x gen.sh
-> ./gen.sh
+> bash gen.sh
 ```
 You will now find some ```.txt``` files, which have the local date-time (during the catalog generation) as a prefix. Each of these ```.txt``` files contain a specific property of a mock FRB.
 These results are analyzed in a single run of FLARE, and they are saved as ```.png``` files.
