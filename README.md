@@ -1,5 +1,6 @@
 # FLARE
-[![DOI](https://zenodo.org/badge/340846727.svg)](https://doi.org/10.5281/zenodo.4562274)  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4587357.svg)](https://doi.org/10.5281/zenodo.4587357)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 
