@@ -1,6 +1,15 @@
 #!/bin/bash
 
+echo "______ _       ___  ______ _____ "
+echo "|  ___| |     / _ \ | ___ \  ___|"
+echo "| |_  | |    / /_\ \| |_/ / |__  "
+echo "|  _| | |    |  _  ||    /|  __| "
+echo "| |   | |____| | | || |\ \| |___ "
+echo "\_|   \_____/\_| |_/\_| \_\____/ "
 
+echo "Welcome to FLARE v2.0, now including optimized parallel processing and data loading. "
+                                 
+                                 
 current_date_time="`date "+%Y-%m-%d %H:%M"`";
 echo "Starting FLARE at $current_date_time:"
 
