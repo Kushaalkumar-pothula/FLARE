@@ -2,7 +2,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4587357.svg)](https://doi.org/10.5281/zenodo.4587357)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-
+<img src="./images/flare_logo.png">
 
 FLARE is an astrophysical code written in Python to generate a synthetic catalog of 100,000 Fast Radio Bursts (FRBs). It uses the Monte Carlo statistical technique to generate a synthetic FRB catalog. It also analyses the resulting catalog and makes its histograms.
 
